@@ -132,13 +132,14 @@ ul.skills-list > li > .skills-icon{
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 80em;
-        background-color: red;
-    
+        height: 80em;    
     }
     .picture-container-inside> img{
-        height: 40em;
+        height: 42em;
         width: 30em;
+        border-top: solid 5px var(--color-lightred);
+        border-left: solid 5px var(--color-lightred);
+        border-radius: 2em 0 2em 0;
     }
     .my-info-container, .myBackground-container{
         width: 90%;
