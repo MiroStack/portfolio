@@ -1,0 +1,215 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Monofett&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@700&display=swap');
+:root{
+  --font-style1:"Poppins", sans-serif;
+  --font-style2:"Kdam Thmor Pro", sans-serif;
+  --font-style3: "Monofett", monospace;
+  --font-size-s: 1.5em;
+  --font-size-m:2em;
+  --font-size-l:3em;
+  --font-size-xl:4em;
+  --font-size-xxl:6em;
+  --font-size-xxxl:8em;
+
+  --background-light:#FFFFFF;
+  --background-dark:#252525;
+  --color-red:#E00606;
+  --color-lightred:#FE3232;
+  --color-yellow:#E6F58A;
+  --color-light:#f5f5f5;
+  --color-dark:#000000;
+  --color-lightgray:#d5d5d5;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: var(--font-style2);
+  font-size: 8px;
+  transition: background ease 200ms;
+}
+
+.light{
+  background-color: var(--background-light);
+  color: var(--color-dark);
+}
+.dark{
+  background-color: var(--background-dark);
+  color: var(--color-light);
+}
+.root-container{
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: red transparent;
+  scroll-behavior: smooth;
+}
+
+
+section{
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav-list{
+  width: 100vw;
+  height: 6em;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right, 
+  var(--color-red) 0%, var(--color-lightred) 100%);
+  color: var(--color-light);
+  font-family: var(--font-style2);
+  gap: 1.5em;
+}
+.nav-list > .burger-menu{
+  font-size: var(--font-size-l);
+  cursor: pointer;
+  display: none;
+}
+.nav-list > h1{
+ font-family: var(--font-style3);
+ font-weight: 400;
+ font-style: normal;
+ font-size: 4em;
+ letter-spacing: 2px;
+ flex-grow: 1;
+ margin-left: 1em;
+}
+
+.nav-list > ul {
+  font-size: 1.2em;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.close{
+  display: none;
+}
+
+.nav-list > ul> li {
+  font-size: var(--font-size-m);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+
+}
+.nav-list > ul>  li > a{
+  text-decoration: none;
+  color: inherit;
+}
+.nav-list > ul> li > a:focus{
+  text-decoration: underline;
+}
+.nav-list > ul>  li:hover{
+  color: var(--color-dark);
+}
+.nav-list > ul> li > .nav-icons{
+  font-size: var(--font-size-s);
+}
+.nav-list > .theme-toggle{
+  position: relative;
+  width: 6em;
+  height: 3em;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 5.5em;
+
+}
+.theme-toggle> .theme-icon{
+  position: absolute;
+  top: 50%;
+ 
+  transform: translate(-50%, -50%);
+   height: 2em;
+   width: 2em;
+   border-radius: 50%;
+   transition: all ease 200ms;
+}
+.theme-toggled-light{
+  left: 20%;
+  background-color: var(--color-yellow);
+
+}
+.theme-toggled-dark{
+  left: 80%;
+  background-color: var(--color-lightgray);
+
+}
+footer{
+  text-align: center;
+  font-size: var(--font-size-s);
+}
+
+@media (min-width:360px) and (max-width:768px){
+  .nav-list > .burger-menu{
+   display: flex;
+   align-items: center;
+   margin-left:1em;
+  }
+  .nav-list{
+    height: 10em;
+  }
+  .nav-list > h1{
+    margin: 0;
+  }
+  .nav-list > ul {
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    position: absolute;
+    background-color:var(--color-red);
+  }
+  .close{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    font-size: 3em;
+    cursor: pointer;
+  }
+  .close:hover{
+    color: var(--color-yellow);
+  }
+  .nav-list > ul > li{
+    margin-top: 5em;
+    font-size: var(--font-size-l);
+    gap: 1em;
+  }
+  .hide-burger-menu{
+    transform: translateX(-100%);
+  }
+  .show-burger-menu{
+    transform: translateX(0%);
+  }
+}
+
+@media (min-width:360px) and (max-width:480px){
+  body{
+    font-size:5px;
+  }
+}
+@media (min-width:481px) and (max-width:1400px){
+  body{
+    font-size:8px;
+  }
+}
+
+@media (min-width:1401px){
+  body{
+    font-size:10px;
+  }
+}
