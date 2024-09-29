@@ -1,67 +1,34 @@
-import './HomePage.css'
-import ProfileImg from './assets/me.profile.jpg'
-import {useState, useEffect, useRef} from 'react';
+import HeroPage from "./HomePageComponents/HeroPage.jsx";
+import About from "./HomePageComponents/About.jsx"
+import Projects from "./HomePageComponents/Projects.jsx";
+import MyGraduationPicture from './assets/graduated-pic.jpg';
+import MyPicture from './assets/myphoto.jpeg';
+import ProjectMachineMilktea from './assets/project-images/milkteaMachine/thesis_image4.png';
+import ProjectAklatTahanan from './assets/project-images/aklatTahanan/aklat-tahanan.png';
+import ProjectTaskNote from './assets/project-images/taskNote/organizer_task_manage_application.png';
+import ProjectMorseCode from './assets/project-images/morsecodeTranslator/morse-code-app.png';
+import ProjectCalculator from './assets/project-images/calculator/calculator.png';
+import Navbar from "./HomePageComponents/Navbar.jsx";
+import Contact from "./HomePageComponents/Contact.jsx";
+import { useState } from "react";
 
-function HomePage() {
- 
-    const downloadMyResume = ()=>{
-        const linkElement = document.createElement('a')
-        linkElement.href = "https://raw.githubusercontent.com/MiroSarte/resume/main/resume-mirosarte-2024.pdf"
-        linkElement.download = "resume-mirosarte-2024.pdf"
-        linkElement.click()
-    }
+function HomePage(){
+    const [theme, setTheme] = useState("light");
 
-    const[textP1, setTextP1] = useState("");
-    const[myName, setMyName] = useState("");
-    let textIndefRef = useRef(0);
-    let nameIndexRef = useRef(0);
-    const handleText = () =>{
-       const p1 = "  Hi my name is"
-       const pToArr = p1.split("");
-       const spanMyName = "  Miro Ivan D. Sarte";
-       const myNameToArr = spanMyName.split("");
-       if(textIndefRef.current < pToArr.length-1){
-         setTextP1(prev => prev.concat(pToArr[textIndefRef.current]));
-         textIndefRef.current++
-       }
-       else if(textIndefRef.current >=  pToArr.length-1 && nameIndexRef.current < myNameToArr.length-1){
-            setMyName(n => n.concat(myNameToArr[nameIndexRef.current]));
-            nameIndexRef.current++
-            console.log(spanMyName)
-       }
-    }
-    useEffect(()=>{
-       setTimeout(()=>{handleText()}, 50);
-       console.log(myName);
-    },[textP1, myName])
-
-  
-    return(
-        <section className="homepage-section" id="homepage-section">
-              <div className='hero-container'>
-                         <img src={ProfileImg} alt='mirosarte'/>
-                         <span className='border top'></span>
-                         <span className='border left'></span>
-                         <span className='border bottom'></span>
-                         <span className='border right'></span>
-                         
-                 <p className='paragraph1'>
-                    {textP1}
-                  <span>{myName}</span>
-                 </p>
-                 <p className='paragraph2'>
-                   I’m a <span>Software Developer</span>
-                 </p>
-                 <p className='paragraph3'>
-                   I create software applications with passion.
-                 </p>
-                 <button className='download-cv-btn' onClick={downloadMyResume}>
-                    Download CV
-                 </button>
-          
-              </div>
-        </section>
-    )
-    
+return(
+    <div className={`section-wrapper`}>
+            <Navbar setTheme={setTheme}
+               theme={theme}/>
+            <HeroPage MyGraduationPicture={MyGraduationPicture}/>
+            <About theme={theme}
+                   MyPicture={MyPicture}/>
+            <Projects ProjectMachineMilktea={ProjectMachineMilktea}
+                      ProjectAklatTahanan={ProjectAklatTahanan}
+                      ProjectTaskNote={ProjectTaskNote}
+                      ProjectMorseCode={ProjectMorseCode}
+                      ProjectCalculator={ProjectCalculator}/>
+           <Contact/>
+   </div>
+)
 }
 export default HomePage;

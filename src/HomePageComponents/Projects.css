@@ -1,0 +1,166 @@
+
+.projects-section{
+    height: auto;
+}
+.projects-container{
+    height: auto;
+    width: 100%;
+}
+
+.carousel{
+    position: relative;
+   
+}
+.carouselbtn{
+    position: absolute;
+    height: 4em;
+    width: 4em;
+    border-radius: 50%;
+    background-color: var(--color-lightgray);
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: bold;
+    color: var(--color-lightred);
+}
+.carouselbtn:hover{
+    background-color: #f5f5f5;
+}
+.carouselbtn:active{
+    background-color: #777373;
+}
+.carousel-icon{
+    font-size: 2em;
+}
+.carousel > .prev{
+ top: 50%;
+ left: 0;
+ margin-left:1em;
+transform: translateX(0);
+}
+.carousel > .next{
+    top: 50%;
+     right: 0;
+     transform: translateX(0);
+     margin-right:1em;
+
+   }
+.carousel >.project-list{
+    width: 100vw;
+    height: 50em;
+    position:relative;
+    list-style: none;
+    padding: 1em;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+}
+.project-list > li{
+    position:absolute;
+}
+.project-list > li#project1{
+    display: block;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+li#project1 > .project-item > .image-container{
+    height: 40em;
+    width: 60em;
+}
+
+.project-list > li#project2{
+    display: block;
+    right: 0%;
+    top:50%;
+    transform: translate(50%, -50%);
+}
+.project-list > li#project5{
+    display: block;
+    left: 0%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.project-list > li#project3, li#project4{
+    display: none;
+}
+
+.project-item > .image-container{
+    height: 30em;
+    width: 50em;
+}
+
+.project-item{
+    position: relative;
+    height: auto;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+    color: inherit;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+.project-item> p{
+    margin-top: 2em;
+    letter-spacing: 2px;
+}
+.view-project{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.active-project-item{
+    border: solid 3px var(--color-lightred)
+}
+
+.image-container >img, .active-project-item > img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.dot-list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em;
+    margin-top: 1em;
+    list-style: none;
+}
+.dot-list > li{
+    height: 2em;
+    width: 2em;
+    background-color: var(--color-lightgray);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dot-list > .active-dot{
+    background-color: var(--color-lightred);
+}
+@media (min-width: 360px) and (max-width:850px){
+   
+    .carousel > ul > li > .image-container{
+        width: 30em;
+        height: 25em;
+    }
+    .carouselbtn{
+        width: 3em;
+        height: 3em;
+    }
+    .carousel >.project-list{
+        width: 100%;
+        display: flex;
+        gap: 4em;
+        list-style: none;
+        padding: 1em;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scroll-behavior: smooth;
+    }
+   
+}

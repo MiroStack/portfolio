@@ -1,5 +1,4 @@
 import './About.css';
-import MyPicture from './assets/me.graduated-pic.jpg'
 import { DiHtml5 } from "react-icons/di";
 import { DiCss3 } from "react-icons/di";
 import { DiJsBadge } from "react-icons/di";
@@ -13,23 +12,29 @@ import { DiMysql } from "react-icons/di";
 import { DiFirebase } from "react-icons/di";
 import { DiCode } from "react-icons/di";
 import { DiNodejsSmall } from "react-icons/di";
+import { LiaAdobe } from "react-icons/lia";
+import { LiaSketch } from "react-icons/lia";
 
 function About(props) {
     const theme = props.theme;
+    const MyPicture = props.MyPicture
     return(
         <section className="about-section" id='about-section'>
             <div className='picture-container'>
              <img src={MyPicture} alt="mirosarte" />
             </div>
-            <div className="my-info-container">
+            <div className="my-info-container" >
                   <h2>ABOUT</h2>
+                  <h3>I’ll  introduce  a little about myself</h3>
                   <div className='picture-container-inside'>
                     <img src={MyPicture} alt="mirosarte" />
                     </div>
                   <p className={`${theme === "light"? "light-background-p":"dark-background-p"}`}>
-                  I’m Miro Ivan D. Sarte, 23 years old, from Rosario, Cavite. I’m a recent graduate from STI College Rosario with a Bachelor of Science in Computer Engineering. I have a passion for creating websites and mobile applications, and I’m enthusiastic about learning new technologies that emerge today. As a child, I was fascinated by popular websites like Facebook and YouTube. I was curious about how they were developed, which inspired my dream of becoming a software developer someday.
-                  My journey in programming began when I was a first-year student. The first programming language I learned was Java, which made learning other programming languages easier for me since the syntax is mostly similar. During my third year, I developed my first Android application, a “Student Management System.” I was thrilled to receive applause for that application, but unfortunately, not everything went as planned. Due to the pandemic, I had to pause my studies because of financial problems. Despite this setback, my determination to become a software developer remained strong. I found a job and was fortunate to be hired as a Lean Technician. Although my job was not related to programming, I learned new skills, such as drawing layouts in AutoCAD and SketchUp, familiarizing myself with KAIZEN and Lean Six Sigma, and improving my team leadership abilities. After working as a Lean Technician for 1.5 years, I am still determined to pursue my dream, which is why I have decided to resign and continue my studies.
-                  </p>
+                  I’m Miro Ivan D. Sarte, 23 years old, from Rosario, Cavite. I recently graduated from STI College Rosario with a Bachelor of Science in Computer Engineering. I am passionate about creating websites and mobile applications, and I’m enthusiastic about learning new technologies as they emerge.
+
+I had to pause my college education during the pandemic due to financial problems, which led me to work as a Lean Technician at DANAM Philippines Incorporated for one and a half years. In this role, I applied continuous improvement methodologies in the production area using KAIZEN and Lean Six Sigma principles to enhance efficiency and maintain product quality. Although the job was not related to my course or passion, I discovered that I am flexible, a problem solver, and a collaborative team player. After saving enough money for my college education, I returned to school and attempted to become a working student. However, due to scheduling conflicts, I resigned from DANAM and decided to focus fully on my studies.
+
+During my return to college, I ventured into freelancing, offering software development services. Through freelancing, I expanded my programming knowledge and learned how to use the SDLC methodology in my projects, which helped me speed up development and collaborate effectively with clients.                  </p>
                   <h2>
                     BACKGROUNDS
                   </h2>
@@ -100,6 +105,16 @@ function About(props) {
                            <li className='skills-item'>
                             <span className='skills-icon'><DiHtml5 /></span><span className='skills'>FIGMA</span>
                            </li>
+                           <li className='skills-item'>
+                            <span className='skills-icon'><LiaAdobe /></span><span className='skills'>AUTOCAD</span>
+                           </li>
+                           <li className='skills-item'>
+                            <span className='skills-icon'><LiaSketch /></span><span className='skills'>SKETCHUP</span>
+                           </li>
+                           <li className='skills-item'>
+                            <span className='skills-icon'><DiCode /></span><span className='skills'>ARDUINO</span>
+                           </li>
+                           
                       </ul>
                   </div>
             </div>
