@@ -24,6 +24,49 @@
 .image-container{
     width: 50%;
     position:relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.image-container > p{
+    font-size: 2em;
+}
+.image-container > .current-work-container > div{
+    background-color: #e72323;
+    height: 2em;
+    width: 2em;
+}
+.image-container > .current-work-container{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.image-container .icon{
+    font-size: 3em;
+    position: absolute;
+}
+.image-container .react{
+    color: aqua;
+    left: 30%;
+}
+.image-container .android{
+    color: rgb(28, 236, 28);
+    left: 30%;
+    bottom: 10%;
+}
+.image-container .java{
+    color: rgb(236, 215, 28);
+    right: 30%;
+    bottom: 10%;
+}
+.image-container .typescript{
+    color: rgb(236, 215, 28);
+    right: 20%;
+    bottom: 60%;
+}
+.image-container .nodejs{
+    color: rgb(236, 215, 28);
+    right: 30%;
 }
 .image-container > .blob-container1{
     position: absolute;
@@ -102,53 +145,49 @@
         transform: rotate(0deg);
         opacity: 0.5;
         border-radius: 17% 34% 35% 30% / 22% 34% 25% 25%;
-        border: solid 2px var(--color-lightred);
+    
 
     }
     20% {
         transform: rotate(45deg);
         opacity: 1;
         border-radius: 40% 29% 39% 32% / 27% 39% 29% 30%;
-        border: solid 3px var(--color-red);
+       
 
     }
     40% {
         transform: rotate(80deg);
         opacity: 0.3;
         border-radius: 34% 34% 25% 30% / 52% 64% 85% 45%;
-        border: solid 4px var(--color-lightgray);
-        
-
     }
     60% {
         transform: rotate(120deg);
         opacity: 1;
-        border: solid 3px var(--color-red);
-
         border-radius: 20% 39% 39% 32% / 27% 39% 29% 30%;
     }
     80% {
         transform: rotate(250deg);
         opacity: 0.5;
-        border: solid 3px var(--color-lightred);
         border-radius: 32% 34% 35% 30% / 35% 44% 34% 45%;
     }
     100% {
         transform: rotate(360deg);
         opacity: 0.5;
-        border: solid 4px var(--color-lightgray);
         border-radius: 12% 24% 25% 20% / 25% 34% 24% 35%;
     }
 }
 
 .image-wrapper{
     text-align: center;
+        
 }
 
 .image-wrapper > img{
     height: 35em;
-    border-radius: 8px;
+    width: 35em;
+    object-fit: cover;
     border: solid 5px var(--color-lightred);
+    border-radius: 50%;
     margin-top: 1em;
 }
 
@@ -213,6 +252,8 @@
     }
     .hero-container > .image-container{
         display: none;
+        
+
     }
     .intro-container{
         width: 100%;

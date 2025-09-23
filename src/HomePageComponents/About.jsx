@@ -30,19 +30,20 @@ function About(props) {
                     <img src={MyPicture} alt="mirosarte" />
                     </div>
                   <p className={`${theme === "light"? "light-background-p":"dark-background-p"}`}>
-                  I’m Miro Ivan D. Sarte, 23 years old, from Rosario, Cavite. I recently graduated from STI College Rosario with a Bachelor of Science in Computer Engineering. I am passionate about creating websites and mobile applications, and I’m enthusiastic about learning new technologies as they emerge.
-
-I had to pause my college education during the pandemic due to financial problems, which led me to work as a Lean Technician at DANAM Philippines Incorporated for one and a half years. In this role, I applied continuous improvement methodologies in the production area using KAIZEN and Lean Six Sigma principles to enhance efficiency and maintain product quality. Although the job was not related to my course or passion, I discovered that I am flexible, a problem solver, and a collaborative team player. After saving enough money for my college education, I returned to school and attempted to become a working student. However, due to scheduling conflicts, I resigned from DANAM and decided to focus fully on my studies.
-
-During my return to college, I ventured into freelancing, offering software development services. Through freelancing, I expanded my programming knowledge and learned how to use the SDLC methodology in my projects, which helped me speed up development and collaborate effectively with clients.                  </p>
+                  Full Stack Developer with 2 years of hands-on experience designing and building scalable web and mobile applications using modern technologies such as React, TypeScript, JAVA, Spring Boot, and Flutter. Adept at translating business requirements into efficient, user-centric solutions, with strong problem-solving skills and a passion for innovation. Eager to contribute technical expertise and creativity to impactful projects that deliver real value to users.
+                  </p>
                   <h2>
                     BACKGROUNDS
                   </h2>
                   <div className='myBackground-container'>
                          <p className='header'>WORK EXPERIENCE</p>
                          <div className='timeline'>
-                            <p className='company first-p'>Freelancing</p>
-                            <p className='position'>Software Development and 2D/3D modeling</p>
+                            <p className='company first-p'>Ascent Solution Philippines</p>
+                            <p className='position'>Jr. Java Developer</p>
+                            <p className='time-frame'>2024-present</p>
+                          
+                            <p className='company'>Freelance Developer</p>
+                            <p className='position'>Full Stack Developer</p>
                             <p className='time-frame'>2023-present</p>
 
                             <p className='company'>DANAM Philippines Inc</p>
